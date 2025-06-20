@@ -3,6 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div class="space-y-8 animate-fade-in">
         <!-- Main Heading -->
+         <br>
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
           <span class="gradient-text">Hand IA</span>
           <br />
@@ -35,22 +36,22 @@
         </div>
         
         <!-- Phone Mockup -->
-        <div class="relative pt-16">
-          <div class="max-w-sm mx-auto animate-float">
+        <div class="relative pt-8 md:pt-16">
+          <div class="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto animate-float">
             <img 
               src="/mockup/demo.jpeg" 
               alt="Hand IA App Demo" 
-              class="w-full h-full rounded-3xl shadow-2xl border-2 border-white/10 hover:border-primary-400 transition-all duration-300 transform hover:scale-105"
+              class="w-full h-auto mx-auto rounded-2xl sm:rounded-3xl shadow-2xl border-2 border-white/10 hover:border-primary-400 transition-all duration-300 transform hover:scale-105"
             />
             
             <!-- Floating Elements -->
-            <div class="absolute -top-4 -right-4 bg-primary-500/20 backdrop-blur-sm rounded-full p-3">
-              <div class="w-6 h-6 bg-primary-900 rounded-full animate-ping absolute"></div>
-              <div class="w-6 h-6 bg-primary-900 rounded-full"></div>
+            <div class="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 bg-primary-500/20 backdrop-blur-sm rounded-full p-2 sm:p-3">
+              <div class="w-4 h-4 sm:w-6 sm:h-6 bg-primary-900 rounded-full animate-ping absolute"></div>
+              <div class="w-4 h-4 sm:w-6 sm:h-6 bg-primary-900 rounded-full"></div>
             </div>
             
-            <div class="absolute -bottom-4 -left-4 bg-primary-500/20 backdrop-blur-sm rounded-full p-2">
-              <span class="text-2xl p-2">🔮</span>
+            <div class="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 bg-primary-500/20 backdrop-blur-sm rounded-full p-1 sm:p-2">
+              <span class="text-lg sm:text-2xl p-1 sm:p-2">🔮</span>
             </div>
           </div>
         </div>
