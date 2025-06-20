@@ -4,19 +4,17 @@
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
         <div class="flex items-center space-x-3">
-          <div class="w-8 h-8 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg flex items-center justify-center">
-            <Hand class="w-5 h-5 text-white" />
-          </div>
+            <img src="/logo/logo.png" alt="Hand IA" class="w-10 h-10 rounded" />
           <span class="text-xl font-bold gradient-text">Hand IA</span>
         </div>
         
         <!-- Navigation Links -->
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-8">
-            <a href="#inicio" class="text-white hover:text-primary-400 transition-colors duration-200">Inicio</a>
-            <a href="#caracteristicas" class="text-gray-300 hover:text-primary-400 transition-colors duration-200">Características</a>
-            <a href="#como-funciona" class="text-gray-300 hover:text-primary-400 transition-colors duration-200">Cómo Funciona</a>
-            <a href="#descargar" class="text-gray-300 hover:text-primary-400 transition-colors duration-200">Descargar</a>
+            <a href="#inicio" class="text-white hover:gradient-text transition-colors duration-200">Inicio</a>
+            <a href="#caracteristicas" class="text-gray-300 hover:gradient-text transition-colors duration-200">Características</a>
+            <a href="#como-funciona" class="text-gray-300 hover:gradient-text transition-colors duration-200">Cómo Funciona</a>
+            <a href="#descargar" class="text-gray-300 hover:gradient-text transition-colors duration-200">Descargar</a>
           </div>
         </div>
 

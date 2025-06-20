@@ -7,7 +7,9 @@
         
         <!-- Content -->
         <div class="relative z-10">
-          <div class="text-6xl mb-8 animate-float">🔮</div>
+          <div class="flex items-center justify-center mb-6">
+            <img src="/logo/logo.png" alt="Hand IA" class="w-20 h-20 rounded shadow-2xl" />
+          </div>
           
           <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
             Descarga <span class="gradient-text">Hand IA</span>
@@ -21,7 +23,7 @@
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a href="#" class="group flex items-center space-x-3 bg-black hover:bg-gray-900 text-white px-6 py-4 rounded-2xl border border-white/20 hover:border-primary-400 transition-all duration-300 transform hover:scale-105">
               <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <span class="text-black font-bold text-xs">📱</span>
+                <img src="/stores/appstore.png" alt="Hand IA" class=" rounded shadow-2xl" />
               </div>
               <div class="text-left">
                 <div class="text-xs text-gray-400">Descargar en</div>
@@ -31,7 +33,7 @@
             
             <a href="#" class="group flex items-center space-x-3 bg-black hover:bg-gray-900 text-white px-6 py-4 rounded-2xl border border-white/20 hover:border-primary-400 transition-all duration-300 transform hover:scale-105">
               <div class="w-8 h-8 bg-gradient-to-br from-yellow-400 to-green-400 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-xs">▶</span>
+                <img src="/stores/play.png" alt="Hand IA" class=" rounded shadow-2xl" />
               </div>
               <div class="text-left">
                 <div class="text-xs text-gray-400">Disponible en</div>
@@ -64,17 +66,17 @@
 
 <script setup>
 const features = [
-  'Análisis con IA Gemini 2.0',
+  'Análisis con IA Gemini 2.5',
   'Completamente Gratuito',
   'Sin Anuncios Invasivos',
   'Historial de Lecturas',
   'Seguridad Garantizada',
-  'Soporte Multiidioma'
+  'Soporte en Español'
 ]
 
 const stats = [
-  { value: '50K+', label: 'Descargas' },
-  { value: '4.8★', label: 'Calificación' },
-  { value: '200K+', label: 'Lecturas Realizadas' }
+  { value: '1k', label: 'Descargas' },
+  { value: '4.1★', label: 'Calificación' },
+  { value: '50K+', label: 'Lecturas Realizadas' }
 ]
 </script>

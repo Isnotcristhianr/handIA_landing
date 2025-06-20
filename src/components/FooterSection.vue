@@ -5,8 +5,8 @@
         <!-- Brand -->
         <div class="col-span-1 md:col-span-2">
           <div class="flex items-center space-x-3 mb-4">
-            <div class="w-10 h-10 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg flex items-center justify-center">
-              <Hand class="w-6 h-6 text-white" />
+            <div class="w-10 h-10 bg-gradient-to-b rounded flex items-center justify-center">
+              <img src="/logo/logo.png" alt="Hand IA" class="w-10 h-10 rounded" />
             </div>
             <span class="text-2xl font-bold gradient-text">Hand IA</span>
           </div>
@@ -55,10 +55,10 @@
       <!-- Bottom Bar -->
       <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between">
         <p class="text-gray-400 text-sm">
-          © 2024 Hand IA. Todos los derechos reservados.
+          © 2025 Hand IA. Todos los derechos reservados.
         </p>
         <p class="text-gray-400 text-sm mt-4 md:mt-0">
-          Desarrollado con ❤️ usando Vue.js
+          Desarrollado con ❤️ por <a href="https://github.com/Isnotcristhianr0" class="text-primary-400 hover:text-primary-500 transition-colors duration-200">Cristhian Recalde</a>
         </p>
       </div>
     </div>
