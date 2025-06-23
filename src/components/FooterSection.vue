@@ -44,10 +44,10 @@
         <div>
           <h3 class="text-white font-semibold mb-4">Soporte</h3>
           <ul class="space-y-2">
-            <li><a href="#" class="text-gray-400 hover:text-primary-400 transition-colors duration-200">Centro de Ayuda</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-primary-400 transition-colors duration-200">Contacto</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-primary-400 transition-colors duration-200">Privacidad</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-primary-400 transition-colors duration-200">Términos</a></li>
+            <li><router-link to="/centro-ayuda" class="text-gray-400 hover:text-primary-400 transition-colors duration-200">Centro de Ayuda</router-link></li>
+            <li><router-link to="/contacto" class="text-gray-400 hover:text-primary-400 transition-colors duration-200">Contacto</router-link></li>
+            <li><router-link to="/privacidad" class="text-gray-400 hover:text-primary-400 transition-colors duration-200">Privacidad</router-link></li>
+            <li><router-link to="/terminos" class="text-gray-400 hover:text-primary-400 transition-colors duration-200">Términos</router-link></li>
           </ul>
         </div>
       </div>
