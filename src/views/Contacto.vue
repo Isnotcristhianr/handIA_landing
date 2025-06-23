@@ -22,13 +22,24 @@
         <!-- Contact Form -->
         <div class="glass-card p-8">
           <h2 class="text-2xl font-bold text-white mb-6">Envíanos un mensaje</h2>
-          <form @submit.prevent="submitForm" class="space-y-6">
+          <form 
+            action="https://formsubmit.co/isnotcristhian@gmail.com" 
+            method="POST"
+            @submit="handleSubmit"
+            class="space-y-6"
+          >
+            <!-- FormSubmit.co configuración -->
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde Hand IA Landing">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_next" value="https://handiaapp.netlify.app/contacto?success=true">
+            
             <div>
               <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Nombre completo</label>
               <input
                 type="text"
                 id="name"
-                v-model="form.name"
+                name="name"
                 required
                 class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-400/20"
                 placeholder="Tu nombre"
@@ -40,7 +51,7 @@
               <input
                 type="email"
                 id="email"
-                v-model="form.email"
+                name="email"
                 required
                 class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-400/20"
                 placeholder="tu@email.com"
@@ -51,16 +62,16 @@
               <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Asunto</label>
               <select
                 id="subject"
-                v-model="form.subject"
+                name="subject"
                 required
                 class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-400/20"
               >
                 <option value="">Selecciona un asunto</option>
-                <option value="soporte-tecnico">Soporte Técnico</option>
-                <option value="problema-app">Problema con la App</option>
-                <option value="sugerencia">Sugerencia</option>
-                <option value="colaboracion">Colaboración</option>
-                <option value="otro">Otro</option>
+                <option value="Soporte Técnico">Soporte Técnico</option>
+                <option value="Problema con la App">Problema con la App</option>
+                <option value="Sugerencia">Sugerencia</option>
+                <option value="Colaboración">Colaboración</option>
+                <option value="Otro">Otro</option>
               </select>
             </div>
             
@@ -68,7 +79,7 @@
               <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Mensaje</label>
               <textarea
                 id="message"
-                v-model="form.message"
+                name="message"
                 required
                 rows="5"
                 class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-400/20 resize-none"
@@ -105,7 +116,7 @@
                 </div>
                 <div>
                   <h3 class="text-white font-semibold">Email</h3>
-                  <p class="text-gray-300">soporte@handia.app</p>
+                  <p class="text-gray-300">isnotcristhian@gmail.com</p>
                 </div>
               </div>
               
@@ -148,7 +159,7 @@
               Apasionado por crear aplicaciones innovadoras que combinan tradición y tecnología.
             </p>
             <a 
-              href="https://github.com/Isnotcristhianr0" 
+              href="https://github.com/Isnotcristhianr" 
               target="_blank"
               class="inline-flex items-center space-x-2 text-primary-400 hover:text-primary-300 transition-colors duration-200"
             >
@@ -164,40 +175,30 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { Mail, Clock, MessageCircle, User, Github, Send } from 'lucide-vue-next'
 import NavBar from '../components/NavBar.vue'
 import FooterSection from '../components/FooterSection.vue'
 
-const form = ref({
-  name: '',
-  email: '',
-  subject: '',
-  message: ''
-})
-
 const isSubmitting = ref(false)
 
-const submitForm = async () => {
+const handleSubmit = (event) => {
   isSubmitting.value = true
   
-  // Simular envío del formulario
-  await new Promise(resolve => setTimeout(resolve, 2000))
-  
-  // Aquí iría la lógica real de envío
-  console.log('Formulario enviado:', form.value)
-  
-  // Reset form
-  form.value = {
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  }
-  
-  isSubmitting.value = false
-  
-  // Mostrar mensaje de éxito (podrías usar una librería de notificaciones)
-  alert('¡Mensaje enviado correctamente! Te responderemos pronto.')
+  // El formulario se enviará automáticamente a FormSubmit.co
+  // Mostrar estado de carga hasta que se redirija
+  setTimeout(() => {
+    isSubmitting.value = false
+  }, 1000)
 }
+
+// Verificar si hay parámetro de éxito en la URL
+onMounted(() => {
+  const urlParams = new URLSearchParams(window.location.search)
+  if (urlParams.get('success') === 'true') {
+    alert('¡Mensaje enviado correctamente! Te responderemos pronto.')
+    // Limpiar la URL
+    window.history.replaceState({}, document.title, window.location.pathname)
+  }
+})
 </script>

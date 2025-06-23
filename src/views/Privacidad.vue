@@ -149,7 +149,7 @@
           </p>
           <div class="flex items-center space-x-4">
             <Mail class="w-5 h-5 text-primary-400" />
-            <span class="text-white">privacidad@handia.app</span>
+            <span class="text-white">isnotcristhian@gmail.com</span>
           </div>
         </div>
       </div>
