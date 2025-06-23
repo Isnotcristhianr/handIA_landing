@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-dark-950 border-t border-white/10 py-12 relative z-10">
+  <footer class="bg-dark-950 border-t border-white/10 py-12 relative z-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         <!-- Brand Section -->
@@ -40,10 +40,10 @@
         <div>
           <h3 class="text-white font-semibold mb-4">Enlaces Rápidos</h3>
           <div class="space-y-2">
-            <a href="#inicio" class="text-gray-400 hover:text-primary-400 transition-colors duration-200 block py-1">Inicio</a>
-            <a href="#caracteristicas" class="text-gray-400 hover:text-primary-400 transition-colors duration-200 block py-1">Características</a>
-            <a href="#como-funciona" class="text-gray-400 hover:text-primary-400 transition-colors duration-200 block py-1">Cómo Funciona</a>
-            <a href="#descargar" class="text-gray-400 hover:text-primary-400 transition-colors duration-200 block py-1">Descargar</a>
+            <a href="#inicio" @click="debugClick" class="text-gray-400 hover:text-primary-400 transition-colors duration-200 block py-1">Inicio</a>
+            <a href="#caracteristicas" @click="debugClick" class="text-gray-400 hover:text-primary-400 transition-colors duration-200 block py-1">Características</a>
+            <a href="#como-funciona" @click="debugClick" class="text-gray-400 hover:text-primary-400 transition-colors duration-200 block py-1">Cómo Funciona</a>
+            <a href="#descargar" @click="debugClick" class="text-gray-400 hover:text-primary-400 transition-colors duration-200 block py-1">Descargar</a>
           </div>
         </div>
         
@@ -124,5 +124,11 @@ const footerInfo = {
     author: 'Cristhian Recalde',
     url: 'https://www.isnotcristhianr.dev/'
   }
+}
+
+// Debug function
+const debugClick = (event) => {
+  console.log('Footer link clicked!', event.target.href)
+  console.log('Target exists:', !!document.getElementById(event.target.href.split('#')[1]))
 }
 </script>

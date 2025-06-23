@@ -11,10 +11,10 @@
         <!-- Navigation Links -->
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-8">
-            <a href="#inicio" class="text-white hover:gradient-text transition-colors duration-200">Inicio</a>
-            <a href="#caracteristicas" class="text-gray-300 hover:gradient-text transition-colors duration-200">Características</a>
-            <a href="#como-funciona" class="text-gray-300 hover:gradient-text transition-colors duration-200">Cómo Funciona</a>
-            <a href="#descargar" class="text-gray-300 hover:gradient-text transition-colors duration-200">Descargar</a>
+            <a href="/#inicio" class="text-white hover:gradient-text transition-colors duration-200">Inicio</a>
+            <a href="/#caracteristicas" class="text-gray-300 hover:gradient-text transition-colors duration-200">Características</a>
+            <a href="/#como-funciona" class="text-gray-300 hover:gradient-text transition-colors duration-200">Cómo Funciona</a>
+            <a href="/#descargar" class="text-gray-300 hover:gradient-text transition-colors duration-200">Descargar</a>
           </div>
         </div>
 
@@ -31,10 +31,10 @@
     <!-- Mobile menu -->
     <div v-if="isMobileMenuOpen" class="md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 bg-black/90 backdrop-blur-xl">
-        <a href="#inicio" @click="closeMobileMenu" class="block px-3 py-2 text-white hover:text-primary-400">Inicio</a>
-        <a href="#caracteristicas" @click="closeMobileMenu" class="block px-3 py-2 text-gray-300 hover:text-primary-400">Características</a>
-        <a href="#como-funciona" @click="closeMobileMenu" class="block px-3 py-2 text-gray-300 hover:text-primary-400">Cómo Funciona</a>
-        <a href="#descargar" @click="closeMobileMenu" class="block px-3 py-2 text-gray-300 hover:text-primary-400">Descargar</a>
+        <a href="/#inicio" @click="closeMobileMenu" class="block px-3 py-2 text-white hover:text-primary-400">Inicio</a>
+        <a href="/#caracteristicas" @click="closeMobileMenu" class="block px-3 py-2 text-gray-300 hover:text-primary-400">Características</a>
+        <a href="/#como-funciona" @click="closeMobileMenu" class="block px-3 py-2 text-gray-300 hover:text-primary-400">Cómo Funciona</a>
+        <a href="/#descargar" @click="closeMobileMenu" class="block px-3 py-2 text-gray-300 hover:text-primary-400">Descargar</a>
       </div>
     </div>
   </nav>
