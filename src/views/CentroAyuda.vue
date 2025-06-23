@@ -1,5 +1,6 @@
 <template>
   <div class="min-h-screen bg-black pt-16">
+    <NavBar />
     <!-- Background Effects -->
     <div class="fixed inset-0 z-0">
       <div class="absolute top-20 left-10 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -104,9 +105,12 @@
         </div>
       </div>
     </div>
+    <FooterSection />
   </div>
 </template>
 
 <script setup>
 import { Download, Smartphone, Shield, AlertCircle, Mail } from 'lucide-vue-next'
+import NavBar from '../components/NavBar.vue'
+import FooterSection from '../components/FooterSection.vue'
 </script>
