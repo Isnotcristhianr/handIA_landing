@@ -32,7 +32,7 @@
             <input type="hidden" name="_subject" value="Nuevo mensaje desde Hand IA Landing">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="box">
-            <input type="hidden" name="_next" value="https://handiaapp.netlify.app/contacto?success=true">
+            <input type="hidden" name="_next" value="https://hand-ia.app/contacto?success=true">
             
             <div>
               <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Nombre completo</label>
