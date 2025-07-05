@@ -25,11 +25,17 @@ const routes = [
     path: '/terminos',
     name: 'Terminos',
     component: () => import('../views/Terminos.vue')
+  },
+  // Ruta catch-all para 404
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('../views/Home.vue') // Redirige a Home o crea una vista 404
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL || '/'),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
